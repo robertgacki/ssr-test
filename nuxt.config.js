@@ -4,5 +4,6 @@ export default {
     components: true,
     router: {
         base: '/catalog/'
-    }
+    },
+    modules: ['@nuxt/http']
 }
