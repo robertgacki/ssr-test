@@ -1,0 +1,20 @@
+runtime: nodejs10
+
+service: my-second-app
+
+handlers:
+  - url: /catalog/_nuxt
+    static_dir: .nuxt/dist/client
+    secure: always
+
+  - url: /catalog/(.*\.(gif|png|jpg|ico|txt))$
+    static_files: static/\1
+    upload: static/.*\.(gif|png|jpg|ico|txt)$
+    secure: always
+
+  - url: /catalog/.*
+    script: auto
+    secure: always
+
+env_variables:
+  HOST: '0.0.0.0'

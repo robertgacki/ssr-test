@@ -1,0 +1,6 @@
+dispatch:
+  - url: "*/catalog/"
+    service: my-second-app
+
+  - url: "*/app"
+    service: app-dev

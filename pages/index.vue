@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Fitatu</h1>
-        <p v-for="post in posts">{{post.description}}</p>
+        <h1>Fitatu app</h1>
+        <p v-for="post in posts">{{post.id}} <NuxtLink :to="`/posts/${post.id}`">{{post.title}}</NuxtLink> {{post.description}}</p>
         <NuxtMountains />
     </div>
 </template>
